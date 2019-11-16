@@ -6,6 +6,8 @@ class Tracks(models.Model):
     trackId = models.AutoField(primary_key=True)
     name = models.CharField(max_length=50)
     location = models.CharField(max_length=50)
+    length = models.IntegerField()
+    current_record = models.CharField(max_length=30)
     image = models.ImageField(upload_to="images/tracks")
 
     def __str__(self):
