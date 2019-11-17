@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<link>
+    <meta charset="UTF-8">
+    <title>Das competition</title>
+<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}/main.css">
+</head>
+<body>
+
+
+
+</body>
+{% block body %}
+{% for foo in tracks %}
+    <div class="track">
+    <p>{{ foo.name }}</p>
+    <img  class="trackimage" src="{{MEDIA_URL}}/{{foo.image }}">
+    <p>Track record: {{ foo.current_record }}</p>
+    <p>Length: {{ foo.length }}</p>
+    </div>
+{% endfor %}
+
+
+
+{% endblock %}
+
+
+
+</html>

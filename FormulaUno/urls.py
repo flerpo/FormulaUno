@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls.static import static
-from django.urls import path
+from django.urls import path, include
 
 from Competition import views
 from FormulaUno import settings
@@ -23,6 +23,7 @@ from FormulaUno import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('tracks/', views.tracks, name="tracks"),
+    path('api/', include('Competition.urls'))
 
 ]
 if settings.DEBUG:

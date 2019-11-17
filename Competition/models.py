@@ -7,7 +7,7 @@ class Tracks(models.Model):
     name = models.CharField(max_length=50)
     location = models.CharField(max_length=50)
     length = models.IntegerField()
-    current_record = models.CharField(max_length=30)
+    current_record = models.CharField(max_length=50)
     image = models.ImageField(upload_to="images/tracks")
 
     def __str__(self):
