@@ -8,5 +8,7 @@ class TrackSerializer(serializers.ModelSerializer):
             'trackId',
             'name',
             'location',
+            'current_record',
+            'length'
         )
         model = Tracks
